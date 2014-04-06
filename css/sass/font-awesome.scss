@@ -1,0 +1,22 @@
+/*!
+ *  Font Awesome 4.0.3 by @davegandy - http://fontawesome.io - @fontawesome
+ *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
+ */
+
+@import "../../bower_components/font-awesome/scss/variables";
+
+// Use our theme's variables file to override font awesome variables
+// before they are used for the below files
+@import "variables";
+
+@import "../../bower_components/font-awesome/scss/mixins";
+@import "../../bower_components/font-awesome/scss/path";
+@import "../../bower_components/font-awesome/scss/core";
+@import "../../bower_components/font-awesome/scss/larger";
+@import "../../bower_components/font-awesome/scss/fixed-width";
+@import "../../bower_components/font-awesome/scss/list";
+@import "../../bower_components/font-awesome/scss/bordered-pulled";
+@import "../../bower_components/font-awesome/scss/spinning";
+@import "../../bower_components/font-awesome/scss/rotated-flipped";
+@import "../../bower_components/font-awesome/scss/stacked";
+@import "../../bower_components/font-awesome/scss/icons";

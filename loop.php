@@ -13,7 +13,8 @@
             <?php } else { ?>
                 <?php the_time( get_option( 'date_format' ) ); ?>
             <?php } // end if ?>
-            by <a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>" title="<?php echo get_the_author_meta( 'display_name' ); ?>"><?php echo the_author_meta( 'display_name' ); ?></a>
+            &middot;&nbsp; <a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>" title="<?php echo get_the_author_meta( 'display_name' ); ?>"><?php echo the_author_meta( 'display_name' ); ?></a>
+            &middot;&nbsp;<?php comments_popup_link( __( '<span class="fa fa-comment"></span> Add New', 'standard' ), __( '<span class="fa fa-comment"></span> 1', 'standard' ), __( '<span class="fa fa-comment"></span> %', 'standard' ), '', ''); ?>
         </p>
     <?php } // end if ?>
 
@@ -38,18 +39,18 @@
         ?>
     </div><!-- /.blog-content -->
 
-    <?php if ( is_single() ) { ?>
-        <div class="blog-post-footer">
-            <?php $category_list = get_the_category_list( __( '&nbsp;', TRANSLATION_KEY ) ); ?>
-            <?php if( $category_list ) { ?>
-                <?php printf( __( 'In %1$s&nbsp;', TRANSLATION_KEY ), $category_list ); ?>
-                <?php echo '' . $category_list; ?>
-            <?php } // end if ?>
-            <?php $tag_list = get_the_tag_list( __( '&nbsp;', TRANSLATION_KEY ) ); ?>
-            <?php if( $tag_list ) { ?>
-                <?php echo $tag_list; ?>
-            <?php } // end if ?>
-        </div>
-    <?php } ?>
+    <div class="blog-post-footer">
+        <?php $category_list = get_the_category_list( __( ', ', 'standard' ) ); ?>
+        <?php if( $category_list ) { ?>
+            <?php printf( __( 'In %1$s', 'standard' ), $category_list ); ?>
+        <?php } // end if ?>
+
+        <?php $tag_list = get_the_tag_list( '', __( ', ', 'standard' ) ); ?>
+        <?php if( $tag_list ) { ?>
+            <?php printf( '<span class="fa fa-tags">&nbsp;' . __( '%1$s', 'standard' ) . '</span>', $tag_list ); ?>
+        <?php } // end if ?>
+
+        <a class="fa fa-link pull-right" href="<?php the_permalink(); ?>"></a>
+    </div>
 
 </article><!-- /.blog-post -->

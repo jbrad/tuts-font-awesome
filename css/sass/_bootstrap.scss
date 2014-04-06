@@ -1,7 +1,6 @@
 // Core variables and mixins
 @import "../../bower_components/bootstrap-sass-official/vendor/assets/stylesheets/bootstrap/variables";
 // Overriding default Bootstrap variables
-@import "variables";
 @import "../../bower_components/bootstrap-sass-official/vendor/assets/stylesheets/bootstrap/mixins";
 
 // Reset
@@ -19,6 +18,8 @@
 
 // Components
 @import "../../bower_components/bootstrap-sass-official/vendor/assets/stylesheets/bootstrap/component-animations";
+
+// Commenting out since we are using Font Awesome
 //@import "../../bower_components/bootstrap-sass-official/vendor/assets/stylesheets/bootstrap/glyphicons";
 @import "../../bower_components/bootstrap-sass-official/vendor/assets/stylesheets/bootstrap/dropdowns";
 @import "../../bower_components/bootstrap-sass-official/vendor/assets/stylesheets/bootstrap/button-groups";

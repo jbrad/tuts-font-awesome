@@ -6,13 +6,13 @@
 
             <?php if( get_next_posts_link() ) { ?>
                 <li>
-                    <?php next_posts_link( __( '&larr; Older', TRANSLATION_KEY ) ); ?>
+                    <?php next_posts_link( __( '<span class="fa fa-chevron-left"></span> Older', TRANSLATION_KEY ) ); ?>
                 </li>
             <?php } // end if ?>
 
             <?php if( get_previous_posts_link() ) { ?>
                 <li>
-                    <?php previous_posts_link( __( 'Newer &rarr;', TRANSLATION_KEY ) ); ?>
+                    <?php previous_posts_link( __( 'Newer <span class="fa fa-chevron-right"></span>', TRANSLATION_KEY ) ); ?>
                 </li>
             <?php } // end if ?>
 

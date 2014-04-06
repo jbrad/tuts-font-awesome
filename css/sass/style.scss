@@ -1,6 +1,6 @@
 /*!
-Theme Name: Tuts Bower
-Theme URI: http://code.tutsplus.com/
+Theme Name: Tuts Font Awesome
+Theme URI: https://github.com/jbrad/tuts-font-awesome
 Version: 1.0.0
 Description: Example project for tutorial on Bower for Tuts+
 Author: Jason Bradley
@@ -11,6 +11,7 @@ License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
 // Import Bootstrap styles
 @import 'bootstrap';
+@import 'font-awesome';
 
 body {
     font-family: Georgia, "Times New Roman", Times, serif;
@@ -167,21 +168,11 @@ h6, .h6 {
     margin-top: 20px;
 
     a {
-        display: inline;
-        padding: .2em .6em .3em;
-        font-size: 75%;
-        font-weight: bold;
-        line-height: 1;
-        color: #fff;
-        text-align: center;
-        white-space: nowrap;
-        vertical-align: baseline;
-        border-radius: .25em;
-
-        @include label-variant($brand-primary);
+        color: $link-color;
 
         &:hover {
             text-decoration: none;
+            color: $link-hover-color;
         }
     }
 }
